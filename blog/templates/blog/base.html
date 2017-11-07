@@ -1,3 +1,4 @@
+
 {% load staticfiles %}
 <!DOCTYPE html>
 
@@ -13,8 +14,8 @@
 <body>
   <div class="page-header">
       <h1><a href="/">Django Girls Blog
-      {% if user.is_authenticated %}
-        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+      {% if user.is_authenticated %} <!-- 관리자만 보이게 -->
+      <a style="color:blue"href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
       {% endif %}
       </a></h1>
   </div>
